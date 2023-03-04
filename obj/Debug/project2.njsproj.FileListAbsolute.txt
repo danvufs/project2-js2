@@ -1,0 +1,3 @@
+D:\Fanshawe\2022W\INFO3168 JavaScript 2\project2\project2\project2\obj\Debug\project2.njsproj.AssemblyReference.cache
+D:\Fanshawe\2022W\INFO3168 JavaScript 2\project2\project2\project2\obj\Debug\project2.njsproj.CoreCompileInputs.cache
+D:\Fanshawe\2022W\INFO3168 JavaScript 2\project2\project2\project2\bin\Microsoft.NodejsTools.WebRole.dll

@@ -1,0 +1,12 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "project2",
+  "main": "server.js",
+  "author": {
+    "name": "Dan Vu"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
