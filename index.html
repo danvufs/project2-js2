@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,44 +89,51 @@
             color: #fff;
             text-decoration: none;
         }
-         
     </style>
+
+</head>
+
+<body>
     <header>
         <h1>Customer Maintenance Page</h1>
     </header>
-
-</head>
-<body>
     <div class="main-container">
         <div class="form">
             <table>
                 <tr>
                     <td>Customer #</td>
-                    <td><input type="text" name="customerId" id="customerId" size="20" placeholder="Your ID" onchange="clearNotification();"></td>
+                    <td><input type="text" name="customerId" id="customerId" size="20" placeholder="Your ID"
+                            onchange="clearNotification();"></td>
                 </tr>
                 <tr>
                     <td>First Name</td>
-                    <td><input type="text" name="firstName" id="firstName" size="40" placeholder="Your First name" onchange="clearNotification();"></td>
+                    <td><input type="text" name="firstName" id="firstName" size="40" placeholder="Your First name"
+                            onchange="clearNotification();"></td>
                 </tr>
                 <tr>
                     <td>Last Name</td>
-                    <td><input type="text" name="lastName" id="lastName" size="40" placeholder="Your Last name" onchange="clearNotification();"></td>
+                    <td><input type="text" name="lastName" id="lastName" size="40" placeholder="Your Last name"
+                            onchange="clearNotification();"></td>
                 </tr>
                 <tr>
                     <td>Address</td>
-                    <td><input type="text" name="address" id="address" size="40" placeholder="Your Address" onchange="clearNotification();"></td>
+                    <td><input type="text" name="address" id="address" size="40" placeholder="Your Address"
+                            onchange="clearNotification();"></td>
                 </tr>
                 <tr>
                     <td>City</td>
-                    <td><input type="text" name="city" id="city" size="20" placeholder="Your City" onchange="clearNotification();"></td>
+                    <td><input type="text" name="city" id="city" size="20" placeholder="Your City"
+                            onchange="clearNotification();"></td>
                 </tr>
                 <tr>
                     <td>Province</td>
-                    <td><input type="text" name="province" id="province" size="20" placeholder="Your Province" onchange="clearNotification();"></td>
+                    <td><input type="text" name="province" id="province" size="20" placeholder="Your Province"
+                            onchange="clearNotification();"></td>
                 </tr>
                 <tr>
                     <td>Postal</td>
-                    <td><input type="text" name="postal" id="postal" size="10" placeholder="Your Postal" onchange="clearNotification();"></td>
+                    <td><input type="text" name="postal" id="postal" size="10" placeholder="Your Postal"
+                            onchange="clearNotification();"></td>
                 </tr>
 
             </table>
@@ -141,8 +149,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
-            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-            crossorigin="anonymous"></script>
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         // Create customer object constructor
         class Customer {
@@ -247,19 +254,19 @@
                 notification.style.color = "red";
                 if (authority) {
                     // Retrieve input value and assign to an object
-                    let customerId = {customerId: customerIdInput.value};
+                    let customerId = { customerId: customerIdInput.value };
 
                     // Make post call to delete user
                     post("/customers/delete", customerId)
-                    .then(rs => {
-                        clearForm();
-                        notification.innerHTML = rs;
-                        notification.style.color = "blue";
-                    })
-                    .catch(err => {
-                        notification.innerHTML = "Customer does not exist!";
-                        notification.style.color = "red";
-                    });
+                        .then(rs => {
+                            clearForm();
+                            notification.innerHTML = rs;
+                            notification.style.color = "blue";
+                        })
+                        .catch(err => {
+                            notification.innerHTML = "Customer does not exist!";
+                            notification.style.color = "red";
+                        });
                 }
             }
         }
@@ -271,7 +278,7 @@
                 notification.innerHTML = "Please enter a customer ID!";
                 notification.style.color = "red";
             } else {
-                let customerId = {customerId: customerIdInput.value};
+                let customerId = { customerId: customerIdInput.value };
 
                 // Function to verify if returned data is a JSON string
                 function IsJsonString(str) {
@@ -336,5 +343,5 @@
             notification.innerHTML = "";
         }</script>
 </body>
-</html>
 
+</html>
