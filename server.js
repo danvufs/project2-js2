@@ -13,7 +13,7 @@ app.use(express.json());
 app.use("/customers", customerRouter);
 
 // Define port for my web app
-let port = process.env.PORT || 80;
+let port = process.env.PORT || 1337;
 
 // Render static content or an existing html page
 app.get("/", function (req, res) {
